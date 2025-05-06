@@ -2,14 +2,14 @@ package entities;
 
 public class Pilha {
 
-	private No topo = null;
+	public No topo = null;
 
 	public void empilhar(int value) {
 		No novo = new No(value);
 		if (topo == null) {
 			topo = novo;
 		} else {
-			topo.next = novo;
+			novo.next = topo;
 			topo = novo;
 		}
 
