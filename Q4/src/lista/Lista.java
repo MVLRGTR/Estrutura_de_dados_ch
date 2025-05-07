@@ -101,4 +101,32 @@ public class Lista {
 			return -1;
 		}
 	}
+	
+	public void empilhar(int valor) {
+		if(this.primeiro==null) {
+			this.inserirPrimeiro(valor);
+		}else {
+			this.inseriUltimo(valor);
+		}
+	}
+	
+	public int desempilhar() {
+		int retVal = 0;
+		
+		if(this.ultimo != null) {
+			retVal = this.ultimo.valor;
+			this.ultimo = this.ultimo.anterior;
+			if(this.ultimo != null) {
+				this.ultimo.proximo = null;
+			}else {
+				this.primeiro = null;
+				this.ultimo = null;
+			}
+		}else {
+			throw new RuntimeException("A pilha está vazia. Não é possível desempilhar.");
+		}
+		
+		return retVal;
+		
+	}
 }
