@@ -23,6 +23,7 @@ public class Fila {
 	
 	public No retira() {
 		if(!this.estaVazio()) {
+			System.out.println("entrou aqui !!");
 			No retVal = this.inicio;
 			this.inicio = this.inicio.proximo;
 			return retVal;
@@ -31,7 +32,12 @@ public class Fila {
 	}
 	
 	public No mostrarPrimeiro() {
-		return inicio;
+		if(this.inicio.pilha.mostrarTopo() != null) {
+			return this.inicio;
+		}else {
+			this.retira();
+			return null;
+		}
 	}
 	
 	public boolean estaVazio() {

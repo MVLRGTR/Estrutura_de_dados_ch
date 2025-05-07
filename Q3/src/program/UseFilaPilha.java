@@ -30,10 +30,9 @@ public class UseFilaPilha {
 		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
 		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
 		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
-	
-
-		System.out.println("Mostrnado topo da pilha dentro da fila : "+fila.mostrarPrimeiro().pilha.mostrarTopo().valor);
 		
+		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
+	
 		
 		
 	}
