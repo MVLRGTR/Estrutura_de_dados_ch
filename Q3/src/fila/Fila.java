@@ -23,7 +23,7 @@ public class Fila {
 	
 	public No retira() {
 		if(!this.estaVazio()) {
-			System.out.println("entrou aqui !!");
+			System.out.println("Retirando Pilha...");
 			No retVal = this.inicio;
 			this.inicio = this.inicio.proximo;
 			return retVal;
@@ -31,13 +31,17 @@ public class Fila {
 		return null;
 	}
 	
-	public No mostrarPrimeiro() {
+	/*public No mostrarPrimeiro() {
 		if(this.inicio.pilha.mostrarTopo() != null) {
 			return this.inicio;
 		}else {
 			this.retira();
 			return null;
 		}
+	}*/
+	
+	public No mostrarPrimeiro() {
+		return this.inicio;
 	}
 	
 	public boolean estaVazio() {
@@ -62,19 +66,16 @@ public class Fila {
 		this.mostrarPrimeiro().pilha.empilhar(valor);
 	}
 	
-	public int removeInteiroPilha() {
+	public int removeInteriroPilha() {
 		try {
-			return this.mostrarPrimeiro().pilha.desempilhar();
-		}catch(EmptyStackException e){
-			
+			return this.inicio.pilha.desempilhar();
+		}catch(EmptyStackException e) {
 			this.retira();
-			
 			if(!this.estaVazio()) {
-				return this.removeInteiroPilha();
+				return this.removeInteriroPilha();
 			}else {
 				throw new RuntimeException("Todas as pilhas estão vazias.");
 			}
 		}
-		
 	}
 }

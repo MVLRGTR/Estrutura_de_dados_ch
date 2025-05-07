@@ -26,12 +26,19 @@ public class UseFilaPilha {
 		fila.inserir(pilha1);
 		fila.inserir(pilha2);
 		
-		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
-		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
-		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
-		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
 		
-		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		System.out.println("removeInteiroPilha : "+fila.removeInteriroPilha());
+		
+		
+		
 	
 		
 		

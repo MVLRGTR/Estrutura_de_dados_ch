@@ -20,7 +20,6 @@ public class Pilha {
 
 	public int desempilhar() {
 		if (topo == null) {
-			System.out.println("entrou desempilhar");
 			throw new EmptyStackException();
 		}
 		int retVal = topo.valor;
