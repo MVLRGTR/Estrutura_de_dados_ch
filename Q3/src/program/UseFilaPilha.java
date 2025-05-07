@@ -17,10 +17,10 @@ public class UseFilaPilha {
 		pilha1.empilhar(4);
 		
 		System.out.println("pilha2 empilhando dados...");
-		pilha2.empilhar(4);
-		pilha2.empilhar(3);
-		pilha2.empilhar(2);
-		pilha2.empilhar(1);
+		pilha2.empilhar(8);
+		pilha2.empilhar(7);
+		pilha2.empilhar(6);
+		pilha2.empilhar(5);
 		
 		System.out.println("Adicionando pilhas a fila...");
 		fila.inserir(pilha1);
@@ -30,7 +30,12 @@ public class UseFilaPilha {
 		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
 		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
 		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
-		System.out.println("removeInteiroPilha : "+fila.removeInteiroPilha());
+	
+
+		System.out.println("Mostrnado topo da pilha dentro da fila : "+fila.mostrarPrimeiro().pilha.mostrarTopo().valor);
+		
+		
+		
 	}
 
 }

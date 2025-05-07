@@ -1,5 +1,7 @@
 package pilha;
 
+import java.util.EmptyStackException;
+
 public class Pilha {
 	private No topo = null;
 
@@ -17,6 +19,9 @@ public class Pilha {
 	}
 
 	public int desempilhar() {
+		if (topo == null) {
+			throw new EmptyStackException();
+		}
 		int retVal = topo.valor;
 		topo = topo.proximo;
 		return retVal;
@@ -28,6 +33,10 @@ public class Pilha {
 		} else {
 			return false;
 		}
+	}
+	
+	public No mostrarTopo() {
+		return this.topo;
 	}
 
 }

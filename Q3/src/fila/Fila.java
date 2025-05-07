@@ -1,5 +1,7 @@
 package fila;
 
+import java.util.EmptyStackException;
+
 import pilha.Pilha;
 
 public class Fila {
@@ -55,7 +57,18 @@ public class Fila {
 	}
 	
 	public int removeInteiroPilha() {
-		return this.mostrarPrimeiro().pilha.desempilhar();
+		try {
+			return this.mostrarPrimeiro().pilha.desempilhar();
+		}catch(EmptyStackException e){
+			
+			this.retira();
+			
+			if(!this.estaVazio()) {
+				return this.removeInteiroPilha();
+			}else {
+				throw new RuntimeException("Todas as pilhas estão vazias.");
+			}
+		}
+		
 	}
-	
 }
