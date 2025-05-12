@@ -24,6 +24,7 @@ public class Pilha {
 		this.tamanho+=1;
 		this.vtotal+=valor;
 		this.maiorEmenor(valor);
+		this.imparEpar(valor);
 		
 		if(this.topo==null) {
 			this.topo=novo;
