@@ -23,6 +23,7 @@ public class UseLista {
 		lista2.inserirUltimo(13);
 		lista2.inserirUltimo(14);
 		lista2.inserirUltimo(15);
+		lista2.inserirUltimo(20);
 		
 		if (lista1.tamanho() == lista2.tamanho() && lista1.vtotal() == lista2.vtotal()) {
 			System.out.printf("As duas listas são iguais !!! tamanho das listas é : %d com valor total de  : %d",
@@ -36,7 +37,42 @@ public class UseLista {
 				System.out.println("A lista2 é maior que a lista1!!!");
 			}
 		}
-
+		
+		System.out.println();
+		System.out.println("-------------------------------------------------------");
+		System.out.printf("O maior nº da lista1 é : %d o menor : %d e a média é : %.2f",lista1.getMaior(),lista1.getMenor(),lista1.media());
+		
+		System.out.println();
+		System.out.println("-------------------------------------------------------");
+		System.out.printf("O maior nº da lista2 é : %d o menor : %d e a média é : %.2f",lista2.getMaior(),lista2.getMenor(),lista2.media());
+		
+		System.out.println();
+		System.out.println("-------------------------------------------------------");
+		System.out.printf("Na lista1 temos %d de elementos impares e %d de elementos pares",lista1.getImpar(),lista1.getPar());
+		
+		System.out.println();
+		System.out.println("-------------------------------------------------------");
+		System.out.printf("Na lista2 temos %d de elementos impares e %d de elementos pares",lista2.getImpar(),lista2.getPar());
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("---------------------Transferindo elemento 10 e 15 da lista2 para a lista1...---------------------");
+		lista1.inserirUltimo(lista2.elementoNaPosicao(lista2.buscaElemento(10)).valor);
+		lista1.inserirUltimo(lista2.elementoNaPosicao(lista2.buscaElemento(15)).valor);
+		
+		System.out.println();
+		System.out.println("---------------------Mostrando lista1---------------------");
+		for(int i = 0 ; i < lista1.tamanho();i++) {
+			System.out.println("Posição "+(i+1)+" valor :"+lista1.elementoNaPosicao(i).valor);
+		}
+		
+		System.out.println();
+		System.out.println("---------------------Mostrando lista2---------------------");
+		for(int i = 0 ; i < lista2.tamanho();i++) {
+			System.out.println("Posição "+(i+1)+" valor :"+lista2.elementoNaPosicao(i).valor);
+		}
+		
+		
 	}
 
 }
