@@ -49,7 +49,7 @@ public class Lista {
 	}
 	
 	public No elementoNaPosicao(int posi) {
-		if(posi <= this.tamanho()) {
+		if(posi <= this.tamanho() && posi >-1) {
 			this.irPosicao(posi);
 			return atual;
 		}
