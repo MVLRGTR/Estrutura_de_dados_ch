@@ -52,6 +52,18 @@ public class UseProgamLista {
 			System.out.println("Posição "+(i+1)+" valor "+lista2.elementoNaPosicao(i).valor);
 		}
 		
+		System.out.println("elemento"+lista1.elementoNaPosicao(lista1.buscaElemento(1)).valor);
+		
+		System.out.println();
+		System.out.println("----------------------------------------------------------------");
+		System.out.println();
+		System.out.println("lista3 formando interção sem repetição da lista1 e 2...");
+		for(int i = 0 ; i<lista1.tamanho();i++) {
+			if(i==0) {
+				lista3.inserirPrimeiro(lista1.elementoNaPosicao(i).valor);
+			}
+			
+		}
 
 	}
 
