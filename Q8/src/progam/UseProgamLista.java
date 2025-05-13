@@ -59,10 +59,33 @@ public class UseProgamLista {
 		System.out.println();
 		System.out.println("lista3 formando interção sem repetição da lista1 e 2...");
 		for(int i = 0 ; i<lista1.tamanho();i++) {
+			int temp = lista1.elementoNaPosicao(i).valor;
 			if(i==0) {
 				lista3.inserirPrimeiro(lista1.elementoNaPosicao(i).valor);
 			}
-			
+			if(lista3.buscaElemento(temp) == -1) {
+				lista3.inserirUltimo(temp);
+			}
+		}
+		for(int i = 0 ; i<lista2.tamanho();i++) {
+			int temp = lista2.elementoNaPosicao(i).valor;
+			if(i==0) {
+				if(lista3.buscaElemento(temp) == -1) {
+					lista3.inserirPrimeiro(lista2.elementoNaPosicao(i).valor);
+				}
+			}
+			if(lista3.buscaElemento(temp) == -1) {
+				lista3.inserirUltimo(temp);
+			}
+		}
+		
+		System.out.println();
+		System.out.println("----------------------------------------------------------------");
+		System.out.println();
+		System.out.println("Mostrando lista3:");
+		System.out.println();
+		for(int i = 0 ; i<lista3.tamanho();i++) {
+			System.out.println("Posição "+(i+1)+" valor "+lista3.elementoNaPosicao(i).valor);
 		}
 
 	}
