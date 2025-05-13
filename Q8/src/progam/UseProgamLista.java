@@ -61,7 +61,7 @@ public class UseProgamLista {
 		for(int i = 0 ; i<lista1.tamanho();i++) {
 			int temp = lista1.elementoNaPosicao(i).valor;
 			if(i==0) {
-				lista3.inserirPrimeiro(lista1.elementoNaPosicao(i).valor);
+				lista3.inserirPrimeiro(temp);
 			}
 			if(lista3.buscaElemento(temp) == -1) {
 				lista3.inserirUltimo(temp);
@@ -71,7 +71,7 @@ public class UseProgamLista {
 			int temp = lista2.elementoNaPosicao(i).valor;
 			if(i==0) {
 				if(lista3.buscaElemento(temp) == -1) {
-					lista3.inserirPrimeiro(lista2.elementoNaPosicao(i).valor);
+					lista3.inserirPrimeiro(temp);
 				}
 			}
 			if(lista3.buscaElemento(temp) == -1) {
@@ -87,7 +87,34 @@ public class UseProgamLista {
 		for(int i = 0 ; i<lista3.tamanho();i++) {
 			System.out.println("Posição "+(i+1)+" valor "+lista3.elementoNaPosicao(i).valor);
 		}
-
+		
+		System.out.println();
+		System.out.println("----------------------------------------------------------------");
+		System.out.println();
+		System.out.println("lista4 fazendo a interscção dos elementos da lista1 e lista2...");
+		if(lista1.tamanho()<lista2.tamanho()) {
+			for(int i = 0 ; i < lista1.tamanho();i++) {
+				if(lista1.buscaElemento(i) != -1 && lista2.buscaElemento(i) != -1) {
+					lista4.inserirUltimo(i);
+				}
+			}
+		}else {
+			for(int i = 0 ; i < lista2.tamanho();i++) {
+				if(lista1.buscaElemento(i) != -1 && lista2.buscaElemento(i) != -1) {
+					lista4.inserirUltimo(i);
+				}
+			}
+		}
+		
+		System.out.println();
+		System.out.println("----------------------------------------------------------------");
+		System.out.println();
+		System.out.println("Mostrando lista4:");
+		System.out.println();
+		for(int i = 0 ; i<lista4.tamanho();i++) {
+			System.out.println("Posição "+(i+1)+" valor "+lista4.elementoNaPosicao(i).valor);
+		}
+		
 	}
 
 }
