@@ -10,6 +10,7 @@ public class Lista {
 		 for(int i = 0 ; i < max ;i++) {
 			 dados[i] = new Celula();
 		 }
+		 inicializar();
 	 }
 	 
 	 public void inicializar() {
